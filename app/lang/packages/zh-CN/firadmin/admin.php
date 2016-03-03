@@ -1,0 +1,46 @@
+<?php 
+
+return array(
+
+	'messages' => array(
+		'attempt-fail'   => 'Attempt failed',
+		'logout-success' => '登录成功',
+		'insufficient-permission' => 'Insufficient permission',
+		'user-not-found' => '用户未找到'
+	),
+	'store-success' => 'Store sucess',
+	'update-success' => 'Update success',
+	'update-password-success' => 'Update password success',
+	'destroy-fail' => 'Destroy fail',
+	'destroy-success' => 'Destroy success',
+	'username' => '用户名',
+	'email' => '邮箱',
+	'new-password' => 'New Password',
+	'new-password_confirmation' => 'Confirm new password',
+	'password' => 'Password',
+	'password_confirmation' => 'Confirm password',
+	'roles' => 'Roles',
+	'store-user' => 'Store user',
+	'edit-user' => 'Edit user',
+	'profile' => 'Profile',
+	'change-password' => 'Change password',
+	'update-user' => 'Update user',
+	'updated-at' => 'Updated at',
+	'created-at' => 'Created at',
+	'add-user' => '创建用户',
+	'users' => '用户',
+	'cancel' => '取消',
+	'show' => '查看',
+	'edit' => '编辑',
+	'delete' => '删除',
+	'return' => '返回',
+	'reset' => '重置',
+	'reset-your-password' => 'Reset your password',
+	'logout' => '登出',
+	'retrieve-password' => 'Retrieve password',
+	'forgot-password' => '忘记密码？',
+	'remember-me' => '自动登录',
+	'sign-in' => '登录',
+	'send-reminder' => 'Send reminder',
+	'delete-confirm' => 'You want to permanatly delete this data entry?'
+);

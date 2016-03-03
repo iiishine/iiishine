@@ -1,0 +1,1 @@
+create table `GHB1601_PRIZE_RECORD` (`ID` int unsigned not null auto_increment primary key, `MPHONE` varchar(20) not null, `AFTER_SHARE` tinyint(1) not null, `IS_MEMBER` tinyint(1) not null, `CREATED_AT` datetime not null, `UPDATED_AT` datetime not null) default character set utf8 collate utf8_general_ci;

@@ -1,0 +1,124 @@
+<?php
+
+return array(
+
+    // 活动code
+    'event_code' => 'GHB2016',
+
+    // CLS API 地址
+    'cls_api_url' => 'http://10.27.0.106:7001/API/GemFor',
+
+    // CLS 参数配置
+    'cls_params' => array(
+        'VENDOR' => 'BIGECKO',
+        'PWD' => 'BIGECKOtest',
+    ),
+
+    // 购开心官网API
+    'gkx_api' => array(
+        // 地址
+        'url' => 'http://wxtest.goukaixincard.com/api',
+
+        // API相关参数
+        'params' => array(
+            'user' => 'wx',   // API用户名
+            'pwd' => 'wx',    // API密码
+        ),
+    ),
+
+    // 用于加密传给通用注册页面openid的密钥
+    'ws_secretkey' => '67cf0b534f2107e90219f2ffa1dd9458',
+
+    /// 服务号过水url地址
+    'wechat_auth_url' => 'http://wxtest.goukaixincard.com/weixinauth',
+
+    // 通用注册页面相关参数
+    'commonreg' => array(
+        // 通用注册页面地址
+        'url' => 'http://uptest.kaixingocard.com.cn/merchant_reg/m',
+
+        // 通用注册页面密钥
+        'key' => '123',
+
+        // 传给通用注册页面的总公司id
+        'mgid' => 'ghb1601',
+    ),
+
+    // 通用后台相关
+     'eventadmin' => array(
+        // 活动后台地址（根路径）
+        'base_url' => 'http://eventtest.goukaixincard.com/event/eventsite',
+
+        // 固定参数
+        'params' => array(
+            'eventid' => 'hongbao2016',
+            'vendor' => 'gr',
+            'password' => '123',
+        ),
+    ),
+
+    // 微信相关
+    'wechat' => array(
+        // 微信公众号原始ID, 调用createUser， getUserinf接口时传入mgid参数用
+        'originId' => 'gh_996e2f1fa663',
+        'appId' => 'wx840ff0b7c95c095e',                    // AppID(应用ID)
+        'appSecret' => 'a5f74e5babc4ea668a281ea6ae3cf62e',  // AppSecret(应用密钥)
+    ),
+
+    // 语音验证码接口地址
+    'voice_code_api' => 'http://10.27.23.105:8801/SMS/SendVerifyCode',
+
+    // 语音验证码接口参数
+    'voice_code_params' => array(
+        'AppCode'   => 'TRAVEL2015', // 系统编码
+        'account'   => 'MKT', // 账号
+        'password'  => 'c7d7ebe8f81da9738d5af9f3a4525577', // 密码
+    ),
+
+    // 短信验证码文案，其中 {code} 为验证码占位符。
+    'sms_verify_code_message' => '您正在申请购开心卡，手机验证码为：{code} , 请在页面上输入验证码并继续完成申办流程，谢谢！',
+
+    // 证件类型
+    'idTypes' => array(
+        '1' => '身份证',
+        '3' => '台胞证',
+        '4' => '港澳通行证',
+        '5' => '军官证',
+        '2' => '护照',
+    ),
+
+    // RECORD_FRAUD_SMS api url 地址。
+    'record_fraud_sms_api_url' => 'http://localhost/',
+
+    // RECORD_FRAUD_SMS api 相关参数设置。
+    'record_fraud_sms_params' => array(
+        'AppCode' => 'GRF',
+    ),
+
+    // 活动所在城市
+    'act_area' => '上海',
+
+    // 获奖时间段
+    // 如果不在任何设置的获奖时间段内进入活动，都不会获奖
+    'prize_time_ranges' => array(
+        array(
+            'start' => '2016-01-01 00:00:00',       // 开始时间 YYYY-MM-DD HH:MM:SS
+            'end' => '2016-01-20 14:08:00',         // 结束时间, 格式同上
+            'limit' => 1,                           // 分前后中奖次数限制(比如设置1,表示分享前后各1次)
+        ),
+
+        array(
+            'start' => '2016-01-20 14:49:00',       // 开始时间 YYYY-MM-DD HH:MM:SS
+            'end' => '2016-01-30 23:59:59',         // 结束时间, 格式同上
+            'limit' => 1,                           // 分前后中奖次数限制(比如设置1,表示分享前后各1次)
+        ),
+
+        array(
+            'start' => '2016-02-01 00:00:00',       // 开始时间 YYYY-MM-DD HH:MM:SS
+            'end' => '2016-02-10 00:00:00',         // 结束时间, 格式同上
+            'limit' => 1,                           // 分前后中奖次数限制(比如设置1,表示分享前后各1次)
+        ),
+
+        // 更多时间段继续在后面添加..
+    ),
+);

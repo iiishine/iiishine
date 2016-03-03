@@ -1,0 +1,232 @@
+* {
+  box-sizing: border-box; -webkit-tap-highlight-color: rgba(0,0,0,0); -webkit-text-size-adjust:none;
+  -webkit-overflow-scrolling: touch;
+}
+html, h1, h2, h3, h4 { margin:0; padding:0; }
+ul, ol { margin-left:0; list-style: none; text-align:left; }
+a { text-decoration:none; color:#fff; border:none; outline: none; }
+img { border:none; }
+form, table { margin:0px; padding:0; }
+body, #body {
+  margin: 0 auto; max-width: 480px; min-height: 400px; box-sizing: border-box; background-color: #141A32;
+  height: 100vh; overflow: hidden;
+}
+body, h1, h2, h3, h4, a { font-family: 'Helvetica', 'MHeiPRC-Bold', '微软雅黑', 'Microsoft YaHei'; }
+
+.topbar {
+  position: fixed; top: 0; left: 0;
+  width: 100%; z-index: 10;
+}
+.btnrule {
+  display: block; width: 45px; height: 91px; opacity: 0;
+  background: transparent url('../images/a-rule.png') no-repeat center center;
+  background-size: cover;
+  position: absolute; top: 0; left: 16px;
+}
+.btndiscounts {
+  display: block; width: 45px; height: 73px; opacity: 0;
+  background: transparent url('../images/a-discount.png') no-repeat center center;
+  background-size: cover;
+  position: absolute; top: 0; left: 64px;
+}
+.logo {
+  position: absolute; top: 10px; right: 10px;
+  width: 110px; z-index: 10;
+}
+.lightning-wrapper {
+  position: relative; width: 100%; height: 100%; min-height: 500px;
+  background-color: #FDD53F;
+}
+.lightning-wrapper.show1 .l1 { display: block; }
+.lightning-wrapper.show2 .l2 { display: block; }
+.lightning-wrapper.show3 .l3 { display: block; }
+.lightning-wrapper.show4 .l4 { display: block; }
+.lightning-wrapper.show5 .l5 { display: block; }
+.lightning-wrapper.show6 .l6 { display: block; }
+.lightning-wrapper.show7 .l7 { display: block; }
+.lightning-wrapper.showall .lightning { display: block; }
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+@-webkit-keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+.lightning {
+  position: absolute; top: 0; left: 0;
+  width: 100%; height: 100%;
+  display: none;
+}
+.lightning.l1 {
+  background-color: #FEDB63;
+  mask-image: url("../images/mask1.png");
+  -webkit-mask-image: url("../images/mask1.png");
+  mask-size: cover;
+  -webkit-mask-size: cover;
+}
+.lightning.l2 {
+  background-color: #FEDB63;
+  mask-image: url("../images/mask2.png");
+  -webkit-mask-image: url("../images/mask2.png");
+  mask-size: cover;
+  -webkit-mask-size: cover;
+}
+.lightning.l3 {
+  background-color: #FEDB63;
+  mask-image: url("../images/mask3.png");
+  -webkit-mask-image: url("../images/mask3.png");
+  mask-size: cover;
+  -webkit-mask-size: cover;
+}
+.lightning.l4 {
+  background-color: #FCCD01;
+  mask-image: url("../images/mask4.png");
+  -webkit-mask-image: url("../images/mask4.png");
+  mask-size: cover;
+  -webkit-mask-size: cover;
+}
+.lightning.l5 {
+  background-color: #FED853;
+  mask-image: url("../images/mask5.png");
+  -webkit-mask-image: url("../images/mask5.png");
+  mask-size: cover;
+  -webkit-mask-size: cover;
+}
+.lightning.l6 {
+  background-color: #FEDE6F;
+  mask-image: url("../images/mask6.png");
+  -webkit-mask-image: url("../images/mask6.png");
+  mask-size: cover;
+  -webkit-mask-size: cover;
+}
+.lightning.l7 {
+  background-color: #FDDC69;
+  mask-image: url("../images/mask7.png");
+  -webkit-mask-image: url("../images/mask7.png");
+  mask-size: cover;
+  -webkit-mask-size: cover;
+}
+.flashlight {
+  position: absolute; top: 10px; left: 50px; z-index: 100; opacity: 0.9;
+  width: 2px; height: 2px; border-radius: 2px; background: white; box-shadow: 0 0 20px 20px #fff;
+}
+.coin {
+  position: absolute; top: 10px; left: 10px; z-index: 100;
+  width: 19px; height: 18px;
+  background-image: url('../images/coins@2x.png');
+  background-position: -47px -32px;
+  background-size: 78px 78px;
+}
+.coin2 {
+  position: absolute; top: 40px; left: 4px; z-index: 1;
+  width: 32px; height: 32px;
+  background-image: url('../images/coins@2x.png');
+  background-position: -47px 0;
+  background-size: 78px 78px;
+}
+.coin4 {
+  position: absolute; top: 110px; right: 2px; z-index: 100;
+  width: 47px; height: 51px;
+  background-image: url('../images/coins@2x.png');
+  background-position: 0 0;
+  background-size: 78px 78px;
+}
+
+.content {
+  position: absolute; top: 1000px; left: 0; width: 100%;
+}
+.content .people {
+  position: absolute; top: 0; left: 0; z-index: 110;
+  width: 100%; display: none;
+}
+.content .people .peopleimg { width: 100%; }
+.content .people .tagimg {
+  position: absolute; width: 57%; bottom: -30%; left: 6px;
+  display: none;
+}
+.content .bag {
+  position: relative; top: 60px; left: -10%; z-index: 2; width: 120%;
+}
+.callout {
+  width: 100%; position: fixed; z-index: 11;
+  bottom: 20px; left: 0; text-align: center;
+}
+.callout .btnget {
+  display: inline-block; width: 71%; margin-top: 6px; opacity: 0; position: relative;
+}
+.callout .btn-content {
+  display: table; vertical-align: middle; position: absolute; width: 100%; height: 100%; top: 0;
+  text-align: center; font-size: 1em; font-weight: bold; color: #F6354A;
+}
+.callout .btn-content span {
+  display: table-cell;vertical-align: middle;
+}
+.callout .btnget img {
+  width: 100%;
+}
+.callout .prize {
+  display: inline-block; width: 71%; opacity: 0; position: relative;
+}
+.callout .prize .shop-logo { width: 30%; height: 76%; border-radius: 5px ; border: 2px solid #F6354A;; position: absolute; top: 9%; left: 3%;}
+.callout .prize .shop-logo img { width: 100%; }
+.callout .prize .prize-content { display: table; width: 62%; height: 76%; position: absolute; top: 4px; left: 36%;}
+.callout .prize .prize-content .price {
+  display: table-cell; width: 52%; vertical-align: middle; color: #F6354A;
+  font-size: 1.5em; font-weight: bold; position: relative; line-height: 120%;
+}
+.callout .prize .prize-content .price span { margin-right: -8px; font-size: .4em; }
+.callout .prize .prize-content .explain {
+  display: table-cell; vertical-align: middle; width: 47%; height: 100%;
+  line-height: 120%; color: #555; font-size: 14px; text-align: left;
+}
+.callout .prize .prize-content .explain span { letter-spacing: 0;}
+.callout .prize .bgimg {
+  width: 100%;
+}
+
+.tc2, .tc{
+  width: 100%;
+  z-index: 200;
+}
+.tc .tcmain,.tc2 .tcmain{
+  width: 100%;
+  background-size: 100% auto;
+}
+.tcmain{
+  background: url("../../images/rule.png") no-repeat 0 bottom;
+  background-size: 100% auto;
+  padding-top: 48%;
+}
+.srule{
+  width: 80%;
+  height: 460px;
+  font-size: .8rem;
+  left: -162px;
+  bottom: -30px;
+}
+.close{
+  width: 10%;
+  top: 15%;
+  right: 10%;
+}
+.close img{width: 100%;}
+.srule{
+  left: -140px;
+}
+@media screen and (max-height: 504px){
+  .content .bag{top: 56px}
+  .callout .prize .prize-content .price{
+    font-size: 1.4em;
+  }
+  .callout .prize .prize-content .explain{
+    font-size: 12px;
+    padding-left: 3%;
+  }
+}
+@media screen and (max-height: 416px){
+  .tcmain{
+    background-position: 0 40px;
+  }
+}
+

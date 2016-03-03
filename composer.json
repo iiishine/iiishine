@@ -1,0 +1,54 @@
+{
+    "type": "project",
+    "require": {
+        "laravel/framework": "4.1.*",
+        "rmccue/requests": ">=1.0",
+        "doctrine/dbal": "~2.3",
+        "mews/captcha": "~1.0",
+        "overtrue/wechat": "~2.0"
+    },
+    "require-dev": {
+        "barryvdh/laravel-debugbar": "1.*",
+        "barryvdh/laravel-ide-helper": "1.*",
+        "phpunit/phpunit": "4.3.*",
+        "doctrine/dbal": "~2.3"
+    },
+    "autoload": {
+        "classmap": [
+            "app/commands",
+            "app/controllers",
+            "app/models",
+            "app/database/migrations",
+            "app/database/seeds",
+            "app/tests/TestCase.php",
+            "app/src/Bigecko/YD/HGCommon/Api/Exceptions.php"
+        ],
+        "files": [
+            "app/src/Bigecko/Larapp/Support/helpers.php",
+            "app/src/Bigecko/YD/HGCommon/Utils/helpers.php"
+        ],
+        "psr-0": {
+            "Bigecko\\Larapp": "app/src/",
+            "Bigecko\\YD": "app/src/"
+        }
+    },
+    "scripts": {
+        "post-install-cmd": [
+            "Bigecko\\Larapp\\Composer\\PostInstallUpdate::run",
+            "php artisan optimize"
+        ],
+        "post-update-cmd": [
+            "php artisan clear-compiled",
+            "Bigecko\\Larapp\\Composer\\PostInstallUpdate::run",
+            "php artisan optimize"
+        ],
+        "post-create-project-cmd": [
+            "php artisan key:generate"
+        ]
+    },
+    "config": {
+        "preferred-install": "dist"
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
