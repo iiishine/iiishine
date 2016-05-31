@@ -1,9 +1,0 @@
-{
-  "name": "less-gr-self",
-  "version": "0.1.0",
-  "auther": "MMxiao",
-  "devDependencies": {
-    "gulp": "3.8.11",
-    "gulp-less": "3.0.1"
-  }
-}
