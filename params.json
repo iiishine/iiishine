@@ -1,0 +1,6 @@
+{
+  "name": "Iiishine.GitHub.io",
+  "tagline": "用来测试",
+  "body": "新建\r\n\r\n1\r\n2\r\n3\r\n$ hexo new page tilte #新建页面\r\n$ hexo new post title #新建文章\r\n$ hexo new draft title #新建草稿\r\n发布\r\n\r\n1\r\n2\r\n3\r\n$ hexo g #部署之前预先生成静态文件 \r\n$ hexo s #启动静态服务器\r\n$ hexo d #部署网站\r\n标签\r\n\r\n文章中添加标签\r\n1\r\n2\r\n3\r\n4\r\n5\r\ntitle: 标签测试文章\r\ntags:\r\n  - Testing\r\n  - Another Tag\r\n ---\r\n新建标签页面\r\n\r\n1\r\n$ hexo new page tags\r\n设置页面类型\r\n\r\n1\r\n2\r\n3\r\n4\r\ntitle: 标签\r\ndate: 2014-12-22 12:39:04\r\ntype: \"tags\"\r\n---\r\n修改菜单（编辑主题配置文件）\r\n\r\n1\r\n2\r\n3\r\n4\r\nmenu:\r\n     home: /\r\n     archives: /archives\r\n     tags: /tags\r\n相关链接\r\n\r\nhexo 官方文档\r\nhexo github 搭建",
+  "note": "Don't delete this file! It's used internally to help with page regeneration."
+}
